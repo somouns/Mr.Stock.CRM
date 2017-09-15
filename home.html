@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
     <link href="css/base/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/base/font-awesome.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet"/>
+    <style>
+        @media (max-width: @screen-xs-max) {
+
+        }
+    </style>
 </head>
 <body>
 
 <div class="wrapper wrapper-content">
     <!-- 头部及logo用户中心 -->
     <div class="row home-header">
-        <div class="col-md-6"><a href=""><img src="images/a3.jpg" alt=""></a><h3>首页</h3></div>
-        <div class="col-md-6">login</div>
+        <div class="col-md-6 col-sm-6 col-sm-12"><a href="" class="header-title"><img src="images/a3.jpg" alt=""></a><h3>首页</h3></div>
+        <div class="col-md-6 col-sm-6 col-sm-12">
+            <div class="header-right">
+                <a href="" class="user-photo"><img src="images/a8.jpg" alt=""></a>
+                <span>周杰伦</span>
+                <a href="">密码修改</a>
+                <a href="">退出</a>
+                <a class="email-icon"><i class="glyphicon glyphicon-envelope"></i><span class="email-total">1</span></a>
+            </div>
+        </div>
     </div>
     <!-- 主内容分类导航 -->
     <div class="row home-cont">
@@ -83,6 +99,10 @@
         </div>
     </div>
 </div>
+
+<script src="./js/libs/jquery/jquery.min.js"></script>
+<script src="./js/libs/require/require.min.js"></script>
+<script src="./js/require.config.js"></script>
 
 </body>
 </html>
