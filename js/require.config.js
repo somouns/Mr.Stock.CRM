@@ -1,6 +1,7 @@
 !(function () {
-    var BaseUrl = './js/';
-    
+    // 配置绝对路径
+    var BaseUrl = (window.location.origin ? window.location.origin : window.location.protocol + '//' + window.location.host) + '/js/'; 
+
     requirejs.config({
         baseUrl: BaseUrl,
         paths: {
