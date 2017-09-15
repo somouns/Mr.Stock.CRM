@@ -1,6 +1,7 @@
 !(function () {
-    var BaseUrl = './js/';
-    
+    // 配置绝对路径
+    var BaseUrl = (window.location.origin ? window.location.origin : window.location.protocol + '//' + window.location.host) + '/js/'; 
+
     requirejs.config({
         baseUrl: BaseUrl,
         paths: {
@@ -21,6 +22,7 @@
             'validform'          :       'libs/jquery/validform_v5.3.2',// 表单验证
             'store'              :       'libs/store/store.min',// localStorage 、sessionStorage
             'bootstrap'          :       'libs/bootstrap/bootstrap.min',// bootstrap
+            'iCheck'             :       'libs/jquery/icheck.min',//表单美化
             //--------------封装方法----------------------
             'ajaxurl'            :       'base/ajaxurl',// 全局 ajax url
             'layers'             :       'base/layers',// 弹出层
