@@ -1,0 +1,62 @@
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+.wrapper .home-header {
+  background: #E5E9EB;
+  margin-bottom: 20px;
+}
+.wrapper .home-header a {
+  display: inline-block;
+  padding-right: 15px;
+  border-right: 2px solid #408080;
+}
+.wrapper .home-header a img {
+  width: 40px;
+  height: 40px;
+}
+.wrapper .home-header h3 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper .home-cont .show-logo {
+  text-align: center;
+}
+.wrapper .home-cont .show-logo img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+.wrapper .home-list .list-classify {
+  margin: 0 40px;
+}
+.wrapper .home-list .list-classify .list-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+  border-bottom: 1px dotted #ccc;
+}
+.wrapper .home-list .list-classify .classify-li {
+  line-height: 40px;
+  font-size: 14px;
+}
+.wrapper .home-list .list-classify .classify-li .explain {
+  padding: 5px 10px;
+  background: #5BC0DE;
+  color: #fff;
+  margin-right: 15px;
+}
+.wrapper .home-list .list-classify .classify-li .date {
+  float: right;
+}
