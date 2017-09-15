@@ -13,6 +13,7 @@ npm i http-server -g
 cd Mr.Stock.CRM 
 http-server .
 ```
+
 3. 访问地址
 ```bash
 http://127.0.0.1:8080
