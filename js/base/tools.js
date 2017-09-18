@@ -61,31 +61,31 @@ define(['store', 'jquery.cookie'], function (store) {
          * @param  {[type]} completeCallbacl   [不管成功与否的回调]
          */
         ajax: function (args, successCallback, beforeSendCallback, completeCallbacl) {
-            if (!args.url) {
-                throw new Error('ajax参数错误！');
-            }
-            var _THIS_ = new Object();
-            $.extend(_THIS_, {
-                url: null,
-                type: 'get',
-                dataType: 'jsonp',
-                data: null,
-                beforeSend: function () {
-                    typeof beforeSendCallback === 'function' && beforeSendCallback.call(this);
-                },
-                complete: function () {
-                    typeof completeCallbacl === 'function' && completeCallbacl.call(this);
-                },
-                success: function (data) {
-                    typeof successCallback === 'function' && successCallback.call(this, data);
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    console.log(XMLHttpRequest, textStatus, errorThrown)
-                    throw new Error(args.url + '系统错误！');
+                if (!args.url) {
+                    throw new Error('ajax参数错误！');
                 }
-            }, args);
-            _THIS_.data.route_mark = 'web';
-            $.ajax(_THIS_);
+                var _THIS_ = new Object();
+                $.extend(_THIS_, {
+                    url: null,
+                    type: 'get',
+                    dataType: 'jsonp',
+                    data: null,
+                    beforeSend: function () {
+                        typeof beforeSendCallback === 'function' && beforeSendCallback.call(this);
+                    },
+                    complete: function () {
+                        typeof completeCallbacl === 'function' && completeCallbacl.call(this);
+                    },
+                    success: function (data) {
+                        typeof successCallback === 'function' && successCallback.call(this, data);
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        console.log(XMLHttpRequest, textStatus, errorThrown)
+                        throw new Error(args.url + '系统错误！');
+                    }
+                }, args);
+                _THIS_.data.route_mark = 'web';
+                $.ajax(_THIS_);
         },
         /**
          * [formatNumber description] 格式化大位数字  超过万 显示  xx万  xx亿
