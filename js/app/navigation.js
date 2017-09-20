@@ -2,43 +2,7 @@
  * 主窗口全局主题配置
  */
 require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], function () {
-
-    $(window).bind("load resize", function () {
-        if ($(this).width() < 769) {
-            $('body').addClass('mini-navbar');
-            $('.navbar-static-side').fadeIn();
-        }
-    });
-
-    function NavToggle() {
-        $('.navbar-minimalize').trigger('click');
-    }
-
-    function SmoothlyMenu() {
-        if (!$('body').hasClass('mini-navbar')) {
-            $('#side-menu').hide();
-            setTimeout(
-                function () {
-                    $('#side-menu').fadeIn(500);
-                }, 100);
-        } else if ($('body').hasClass('fixed-sidebar')) {
-            $('#side-menu').hide();
-            setTimeout(
-                function () {
-                    $('#side-menu').fadeIn(500);
-                }, 300);
-        } else {
-            $('#side-menu').removeAttr('style');
-        }
-    }
-
-    function localStorageSupport() {
-        return (('localStorage' in window) && window['localStorage'] !== null)
-    }
-
-    // MetsiMenu
     $('#side-menu').metisMenu();
-
     // 打开右侧边栏
     $('.right-sidebar-toggle').click(function () {
         $('#right-sidebar').toggleClass('sidebar-open');
@@ -81,18 +45,19 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
         });
     });
 
+
     // 菜单切换
     $('.navbar-minimalize').click(function () {
         $("body").toggleClass("mini-navbar");
         SmoothlyMenu();
     });
 
+
     // 侧边栏高度
     function fix_height() {
         var heightWithoutNavbar = $("body > #wrapper").height() - 61;
         $(".sidebard-panel").css("min-height", heightWithoutNavbar + "px");
     }
-
     fix_height();
 
     $(window).bind("load resize click scroll", function () {
@@ -132,7 +97,35 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
         $('#content-main').css('overflow-y', 'auto');
     }
 
-    // 顶部菜单固定
+    $(window).bind("load resize", function () {
+        if ($(this).width() < 769) {
+            $('body').addClass('mini-navbar');
+            $('.navbar-static-side').fadeIn();
+        }
+    });
+
+    function NavToggle() {
+        $('.navbar-minimalize').trigger('click');
+    }
+
+    function SmoothlyMenu() {
+        if (!$('body').hasClass('mini-navbar')) {
+            $('#side-menu').hide();
+            setTimeout(
+                function () {
+                    $('#side-menu').fadeIn(500);
+                }, 100);
+        } else if ($('body').hasClass('fixed-sidebar')) {
+            $('#side-menu').hide();
+            setTimeout(
+                function () {
+                    $('#side-menu').fadeIn(500);
+                }, 300);
+        } else {
+            $('#side-menu').removeAttr('style');
+        }
+    }
+
     $('#fixednavbar').click(function () {
         if ($('#fixednavbar').is(':checked')) {
             $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
@@ -156,6 +149,7 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
             }
         }
     });
+
 
     // 收起左侧菜单
     $('#collapsemenu').click(function () {
@@ -187,6 +181,7 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
             if (localStorageSupport) {
                 localStorage.setItem("fixednavbar", 'off');
             }
+
 
             if (localStorageSupport) {
                 localStorage.setItem("boxedlayout", 'on');
@@ -264,6 +259,11 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
         }
     }
 
+    //判断浏览器是否支持html5本地存储
+    function localStorageSupport() {
+        return (('localStorage' in window) && window['localStorage'] !== null)
+    }
+
     //计算元素集合的总宽度
     function calSumWidth(elements) {
         var width = 0;
@@ -272,7 +272,6 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
         });
         return width;
     }
-
     //滚动到指定选项卡
     function scrollToTab(element) {
         var marginLeftVal = calSumWidth($(element).prevAll()), marginRightVal = calSumWidth($(element).nextAll());
@@ -300,7 +299,6 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
             marginLeft: 0 - scrollVal + 'px'
         }, "fast");
     }
-
     //查看左侧隐藏的选项卡
     function scrollTabLeft() {
         var marginLeftVal = Math.abs(parseInt($('.page-tabs-content').css('margin-left')));
@@ -332,7 +330,6 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
             marginLeft: 0 - scrollVal + 'px'
         }, "fast");
     }
-
     //查看右侧隐藏的选项卡
     function scrollTabRight() {
         var marginLeftVal = Math.abs(parseInt($('.page-tabs-content').css('margin-left')));
@@ -407,14 +404,6 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
             // 添加选项卡对应的iframe
             var str1 = '<iframe class="J_iframe" name="iframe' + dataIndex + '" width="100%" height="100%" src="' + dataUrl + '" frameborder="0" data-id="' + dataUrl + '" seamless></iframe>';
             $('.J_mainContent').find('iframe.J_iframe').hide().parents('.J_mainContent').append(str1);
-
-            //显示loading提示
-//            var loading = layer.load();
-//
-//            $('.J_mainContent iframe:visible').load(function () {
-//                //iframe加载完成后隐藏loading提示
-//                layer.close(loading);
-//            });
             // 添加选项卡
             $('.J_menuTabs .page-tabs-content').append(str);
             scrollToTab($('.J_menuTab.active'));
@@ -514,14 +503,12 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
         });
         $('.page-tabs-content').css("margin-left", "0");
     }
-
     $('.J_tabCloseOther').on('click', closeOtherTabs);
 
     //滚动到已激活的选项卡
     function showActiveTab() {
         scrollToTab($('.J_menuTab.active'));
     }
-
     $('.J_tabShowActive').on('click', showActiveTab);
 
 
@@ -547,12 +534,6 @@ require(['bootstrap', 'jquery.metisMenu', 'jquery.slimscroll', 'layer'], functio
     function refreshTab() {
         var target = $('.J_iframe[data-id="' + $(this).data('id') + '"]');
         var url = target.attr('src');
-//        //显示loading提示
-//        var loading = layer.load();
-//        page.attr('src', url).load(function () {
-//            //关闭loading提示
-//            layer.close(loading);
-//        });
     }
 
     $('.J_menuTabs').on('dblclick', '.J_menuTab', refreshTab);

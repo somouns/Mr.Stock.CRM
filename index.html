@@ -1,112 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="renderer" content="webkit"/>
     <title>首页</title>
-    <link href="css/base/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/base/font-awesome.css" rel="stylesheet">
-    <link href="css/base/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="js/libs/layui/css/modules/layer/default/layer.css">
-    <link href="css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/base/bootstrap.min.css"/>
+    <link rel="stylesheet" href="js/libs/layui/css/modules/layer/default/layer.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
 
-<div class="wrapper wrapper-content">
-    <!-- 头部及logo用户中心 -->
-    <div class="row home-header">
-        <div class="col-md-6 col-sm-6 col-sm-12"><a href="" class="header-title"><img src="images/a3.jpg" alt=""></a><h3>首页</h3></div>
-        <div class="col-md-6 col-sm-6 col-sm-12">
-            <div class="header-right">
-                <a href="" class="user-photo"><img src="images/a8.jpg" alt=""></a>
-                <span>周杰伦</span>
-                <a href="">密码修改</a>
-                <a href="">退出</a>
-                <a class="email-icon"><i class="glyphicon glyphicon-envelope"></i><span class="email-total">1</span></a>
-            </div>
-        </div>
-    </div>
-    <!-- 主内容分类导航 -->
-    <div class="row home-cont">
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-        <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
-    </div>
-    <!-- 通知列表 -->
-    <div class="row home-list">
-        <!-- 待处理提醒 -->
-        <div class="col-md-6 col-sm-6">
-            <div class="row list-classify">
-                <div class="col-md-12 list-title">待处理提醒</div>
-                <div class="col-md-12">
-                    <ul>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                    </ul>
+<div id="app">
+    <div class="wrapper wrapper-content">
+        <!-- 头部及logo用户中心 -->
+        <div class="row home-header">
+            <div class="col-md-6 col-sm-6 col-xs-6"><a href="" class="header-title"><img src="images/a3.jpg" alt=""></a><h3>首页</h3></div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="header-right">
+                    <a href="" class="user-photo"><img src="images/a8.jpg" alt=""></a>
+                    <span>周杰伦</span>
+                    <a href="">密码修改</a>
+                    <a href="">退出</a>
+                    <a class="email-icon"><i class="glyphicon glyphicon-envelope"></i><span class="email-total">1</span></a>
                 </div>
             </div>
         </div>
-        <!-- 消息中心 -->
-        <div class="col-md-6 col-sm-6">
-            <div class="row list-classify">
-                <div class="col-md-12 list-title">消息中心</div>
-                <div class="col-md-12">
-                    <ul>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                        <li class="classify-li">
-                            <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
-                        </li>
-                    </ul>
+        <!-- 主内容分类导航 -->
+        <div class="row home-cont">
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href="page/configuration/configuration-look.html"><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href="page/examine-manage/all-examine.html"><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href="page/client-manage/navigation.html"><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+            <div class="col-md-2 col-sm-4 col-xs-6 show-logo"><a href=""><img src="images/a1.jpg" alt=""></a></div>
+        </div>
+        <!-- 通知列表 -->
+        <div class="row home-list">
+            <!-- 待处理提醒 -->
+            <div class="col-md-6 col-sm-6">
+                <div class="row list-classify">
+                    <div class="col-md-12 list-title">待处理提醒</div>
+                    <div class="col-md-12">
+                        <ul>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- vue测试 -->
-        <div class="col-md-12">
-            <div id="app">
+            <!-- 消息中心 -->
+            <div class="col-md-6 col-sm-6">
+                <div class="row list-classify">
+                    <div class="col-md-12 list-title">消息中心</div>
+                    <div class="col-md-12">
+                        <ul>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                            <li class="classify-li">
+                                <a href=""><span class="explain">法务</span><span class="details">【发版公告】crm系统1.1.1</span><span class="date">2017-07-09</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- vue测试 -->
+            <div class="col-md-12">
                 <p>{{message}}</p>
-                <button class="button alert-mess" @clik>按钮</button>
+                <button class="button alert-mess" @click="open">按钮</button>
+                <button class="button login">登录</button>
                 <ul>
-                    <li v-for="item in option">姓名为: {{item.name}}, 年龄为: {{item.age}}</li>
+                    <li v-for="item in option">
+                        <span>姓名为: {{item.name | isMaxLen(4)}}</span>
+                        <span>年龄为: {{item.age}}</span>
+                        <span>日期为: {{item.time | ConvertDate}}</span>
+                    </li>
                 </ul>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
+
 
 <script src="./js/libs/jquery/jquery.min.js"></script>
 <script src="./js/libs/require/require.min.js"></script>

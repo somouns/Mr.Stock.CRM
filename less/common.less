@@ -1,1 +1,35 @@
 // 全局公共样式
+@charset "utf-8";
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, dd, dl, dt, li, ol, ul,input,select,button,textarea,img { padding:0; margin:0; border:none;}
+input,button,select,textarea,a,img{outline:none; vertical-align:top;}/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
+::-moz-focus-inner{border:0;}/*火狐的私有属性去掉点击时边框*/
+body {font-size:14px; width:100%; background:#f3f3f3; overflow-x:hidden;  font-family:"Microsoft YaHei","SimSun","Arial";}
+html{ width:100%;}
+a img {	border:none; }
+a {	text-decoration:none; outline:none; padding:0; margin:0; cursor:pointer; cursor:hand;}
+ul, ul li, ol li, li {	list-style:none;}
+table {	border-collapse: collapse;border-spacing:0;}
+i{ font-style: normal;}
+input, textarea {border: 0;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: ".";clear: both;height: 0;}
+.clearfix {zoom: 1;}
+.fl {float:left;}
+.fr {float:right;}
+@media (min-width: 1600px) {
+  .container {
+    width: 1600px;
+  }
+}
+
+.affirm {
+  padding: 20px;
+  .closed {
+    display: block;
+    text-align: right;
+    font-size: 28px;
+  }
+  p {
+    text-align: center;
+  }
+}
