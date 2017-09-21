@@ -18,7 +18,7 @@ require([], function() {
         }
     };
     var _init = function() {
-        common.prevent();
+        //common.prevent();
     };
     _init();
 });

@@ -1,49 +1,196 @@
-.container {
-  .examine {
-    margin: 20px 0;
-    .example-tab {
-      height: 42px;
-      margin-bottom: 20px;
-      span {
-        display: inline-block;
-        height: 42px;
-        line-height: 42px;
-        padding: 0 20px;
-        font-size: 18px;
-        border: 1px solid #333;
-        border-radius: 5px;
-      }
+.examine {
+  margin: 20px 0;
+}
+.examines {
+  margin: 20px 0;
+  overflow: hidden;
+}
+.example-handle {
+  float: right;
+  font-size: 0;
+  text-align: right;
+  .examine-operate {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    margin-left: 20px;
+    color: #fff;
+    background: #2883E1;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    i {
+      display: inline-block;
+      margin-right: 6px;
     }
-    .examine-tag {
-      height: 24px;
-      margin-bottom: 20px;
-      ul {
-        vertical-align: top;
+  }
+}
+/* 导航样式 */
+.example-tab {
+  height: 42px;
+  .examine-await {
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background: #2883E1;
+      border-color: transparent;
+    }
+  }
+}
+/* 标签样式 */
+.examine-tag {
+  margin: 10px 0;
+  .tag-title {
+    float: left;
+    width: 60px;
+    height: 28px;
+    line-height: 28px;
+  }
+  ul {
+    vertical-align: top;
+    display: block;
+    font-size: 0;
+    margin-left: 60px;
+    li {
+      display: inline-block;
+      margin: 0 20px 10px 0;
+      .tag-a {
         display: inline-block;
-        font-size: 0;
-        li {
-          display: inline-block;
-          margin-right: 20px;
-          a {
-            display: inline-block;
-            height: 24px;
-            line-height: 24px;
-            font-size: 14px;
-            padding: 0 10px;
-            background: #ccc;
-          }
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        padding: 0 10px;
+        &:hover {
+          color: #fff;
+          background: #2883E1;
+          border-radius: 3px;
         }
       }
-    }
-    .examine-search {
-      input {
-        width: 300px;
-        height: 24px;
-      }
-      em {
-        font-size: 30px;
-        vertical-align: middle;
+      .tag-active {
+        color: #fff;
+        background: #2883E1;
+        border-radius: 3px;
       }
     }
   }
 }
+/* 搜索框样式 */
+.examine-search {
+  display: inline-block;
+  .tag-title {
+    float: left;
+    width: 60px;
+    height: 28px;
+    line-height: 28px;
+  }
+  .search-parent {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    height: 28px;
+    .search-inp {
+      display: block;
+      width: 260px;
+      height: 28px;
+      padding-left: 10px;
+      border: 1px solid #D0CECD;
+      vertical-align: middle;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .search-icon {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: -28px;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      color: #fff;
+      background: #D0CECD;
+      text-align: center;
+      font-size: 18px;
+      border: 1px solid #D0CECD;
+      border-left: 0;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      cursor: pointer;
+    }
+  }
+}
+/* 选择器样式 */
+.examine-select {
+  display: inline-block;
+  margin-right: 10px;
+  .tag-title {
+    float: left;
+    width: 60px;
+    height: 28px;
+    line-height: 28px;
+  }
+  .examine-filter {
+    float: left;
+    position: relative;
+    margin-right: 20px;
+    .filter-a {
+      height: 28px;
+      line-height: 28px;
+      i {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 10px;
+        color: #999;
+      }
+      .rotate-i {
+        transform: rotate(180deg);
+      }
+    }
+    .filter-ul {
+      display: none;
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 100px;
+      background: #fff;
+      border: 1px solid #666;
+      z-index: 10;
+      li {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

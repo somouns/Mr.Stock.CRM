@@ -90,8 +90,8 @@ require(["vue", "layer" , "text!../../popup/affirm.html"], function (Vue, layer,
             ];
             // 将数据传递给vue实例
             vue.option = option;
-            console.log(vue.option);
-            console.log(vue.message + 1);
+            //console.log(vue.option);
+            //console.log(vue.message + 1);
         },
         open: function() {
             // 触发点击事件,调用layer弹出层
