@@ -1,97 +1,155 @@
-.wrapper {
-  .home-header {
-    background: #E5E9EB;
-    margin-bottom: 20px;
-    .header-title {
+.bg-color {
+  background: #F1F4F5;
+}
+/* 主页头部 */
+.home-header {
+  background: #2883E0;
+  height: 76px;
+  .header-title {
+    float: left;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 76px;
+    font-weight: bold;
+  }
+  .header-right{
+    float: right;
+    text-align: right;
+    padding-right: 50px;
+    .home-user {
+      color: #fff;
+      font-size: 14px;
+      vertical-align: middle;
+      padding: 0 15px;
+      i {
+      }
+    }
+    .user-photo {
       display: inline-block;
-      padding-right: 15px;
-      border-right: 2px solid #408080;
+      vertical-align: middle;
+      height: 76px;
       img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
+        margin-top: 13px;
+        border-radius: 50px;
       }
     }
-    h3 {
-      display: inline-block;
-      line-height: 40px;
-    }
-    .header-right{
-      text-align: right;
-      a, span {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      .user-photo {
-        img {
-          width: 40px;
-          height: 40px;
-        }
-      }
-      .email-icon {
-        display: inline-block;
+    .email-icon {
+      float: right;
+      margin-top: 20px;
+      .icon-email {
         position: relative;
-        margin-right: 20px;
-        i {
-          color: #6F6F6F;
-          font-size: 24px;
-          line-height: 38px;
-        }
+        font-size: 24px;
+        color: #fff;
         .email-total {
-          display: inline-block;
           position: absolute;
+          top: -5px;
           right: -8px;
-          top: 0;
           padding: 0 5px;
-          background: #CC0000;
+          background: #e4393c;
           color: #fff;
           font-size: 12px;
-          border-radius: 17px;
+          border-radius: 10px;
         }
       }
-    }
-  }
-  .home-cont {
-    .show-logo {
-      text-align: center;
-      img {
-        width: 200px;
-        height: 200px;
-        text-align: center;
-      }
-    }
-  }
-  .home-list {
-    .list-classify {
-      .list-title {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 40px;
-        border-bottom: 1px dotted #ccc;
-      }
-      .classify-li {
-        line-height: 40px;
-        font-size: 14px;
-        .explain {
-          padding: 5px 10px;
-          background: #5BC0DE;
-          color: #fff;
-          margin-right: 15px;
-        }
-        .date {
-          float: right;
-        }
-      }
-    }
-  }
-}
-.button {
-  padding: 5px 10px;
-  background: #e4393c;
-  color: #fff;
-  text-align: center;
-  border: 0;
-  outline: 0;
-  border-radius: 10px;
-  cursor: pointer;
-}
 
+    }
+  }
+}
+.container {
+  padding: 0;
+  margin-top: 20px;
+  /* 左边统计 */
+  .home-list {
+    margin: 0 -7px;
+    .home-dispose {
+      height: 240px;
+      background: #fff;
+      padding: 0;
+      border: 1px solid #EAEDEE;
+      border-radius: 5px;
+      .dispose-cont {
+        height: 200px;
+        margin: 20px;
+        background: #FAFAFA;
+        .dispose-list {
+          padding: 0;
+          .list-title {
+            height: 110px;
+            padding: 0;
+            text-align: center;
+            h3 {
+              color: #2883E0;
+              font-size: 36px;
+            }
+            p {
+              font-size: 16px;
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+    /* 右边消息 */
+    .home-message {
+      background: #fff;
+      height: 240px;
+      border: 1px solid #EAEDEE;
+      border-radius: 5px;
+      .list-classify {
+        .list-title {
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 40px;
+          border-bottom: 1px dotted #ccc;
+        }
+        .classify-li {
+          line-height: 35px;
+          font-size: 14px;
+          .explain {
+            padding: 5px 10px;
+            background: #5BC0DE;
+            color: #fff;
+            margin-right: 15px;
+          }
+          .date {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+  /* 主内容导航区域 */
+  .home-cont {
+    margin-top: 16px;
+    .show-logo {
+      height: 170px;
+      text-align: center;
+      margin-bottom: 16px;
+      padding: 0;
+      .show-nav {
+        display: block;
+        height: 170px;
+        background: #fff;
+        margin: 0 8px 0 8px;
+        text-align: center;
+        border: 1px solid #EAEDEE;
+        border-radius: 5px;
+        img {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          margin-top: 40px;
+          text-align: center;
+        }
+        p {
+          margin-top: 20px;
+          color: #999;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

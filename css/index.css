@@ -1,87 +1,150 @@
-.wrapper .home-header {
-  background: #E5E9EB;
-  margin-bottom: 20px;
+.bg-color {
+  background: #F1F4F5;
 }
-.wrapper .home-header .header-title {
-  display: inline-block;
-  padding-right: 15px;
-  border-right: 2px solid #408080;
+/* 主页头部 */
+.home-header {
+  background: #2883E0;
+  height: 76px;
 }
-.wrapper .home-header .header-title img {
-  width: 40px;
-  height: 40px;
+.home-header .header-title {
+  float: left;
+  padding-left: 50px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 76px;
+  font-weight: bold;
 }
-.wrapper .home-header h3 {
-  display: inline-block;
-  line-height: 40px;
-}
-.wrapper .home-header .header-right {
+.home-header .header-right {
+  float: right;
   text-align: right;
+  padding-right: 50px;
 }
-.wrapper .home-header .header-right a,
-.wrapper .home-header .header-right span {
+.home-header .header-right .home-user {
+  color: #fff;
+  font-size: 14px;
+  vertical-align: middle;
+  padding: 0 15px;
+}
+.home-header .header-right .user-photo {
   display: inline-block;
   vertical-align: middle;
+  height: 76px;
 }
-.wrapper .home-header .header-right .user-photo img {
-  width: 40px;
-  height: 40px;
+.home-header .header-right .user-photo img {
+  width: 50px;
+  height: 50px;
+  margin-top: 13px;
+  border-radius: 50px;
 }
-.wrapper .home-header .header-right .email-icon {
-  display: inline-block;
+.home-header .header-right .email-icon {
+  float: right;
+  margin-top: 20px;
+}
+.home-header .header-right .email-icon .icon-email {
   position: relative;
-  margin-right: 20px;
-}
-.wrapper .home-header .header-right .email-icon i {
-  color: #6F6F6F;
   font-size: 24px;
-  line-height: 38px;
+  color: #fff;
 }
-.wrapper .home-header .header-right .email-icon .email-total {
-  display: inline-block;
+.home-header .header-right .email-icon .icon-email .email-total {
   position: absolute;
+  top: -5px;
   right: -8px;
-  top: 0;
   padding: 0 5px;
-  background: #CC0000;
+  background: #e4393c;
   color: #fff;
   font-size: 12px;
-  border-radius: 17px;
+  border-radius: 10px;
 }
-.wrapper .home-cont .show-logo {
-  text-align: center;
+.container {
+  padding: 0;
+  margin-top: 20px;
+  /* 左边统计 */
+  /* 主内容导航区域 */
 }
-.wrapper .home-cont .show-logo img {
-  width: 200px;
+.container .home-list {
+  margin: 0 -7px;
+  /* 右边消息 */
+}
+.container .home-list .home-dispose {
+  height: 240px;
+  background: #fff;
+  padding: 0;
+  border: 1px solid #EAEDEE;
+  border-radius: 5px;
+}
+.container .home-list .home-dispose .dispose-cont {
   height: 200px;
+  margin: 20px;
+  background: #FAFAFA;
+}
+.container .home-list .home-dispose .dispose-cont .dispose-list {
+  padding: 0;
+}
+.container .home-list .home-dispose .dispose-cont .dispose-list .list-title {
+  height: 110px;
+  padding: 0;
   text-align: center;
 }
-.wrapper .home-list .list-classify .list-title {
+.container .home-list .home-dispose .dispose-cont .dispose-list .list-title h3 {
+  color: #2883E0;
+  font-size: 36px;
+}
+.container .home-list .home-dispose .dispose-cont .dispose-list .list-title p {
+  font-size: 16px;
+  color: #666;
+}
+.container .home-list .home-message {
+  background: #fff;
+  height: 240px;
+  border: 1px solid #EAEDEE;
+  border-radius: 5px;
+}
+.container .home-list .home-message .list-classify .list-title {
   font-size: 18px;
   font-weight: bold;
   line-height: 40px;
   border-bottom: 1px dotted #ccc;
 }
-.wrapper .home-list .list-classify .classify-li {
-  line-height: 40px;
+.container .home-list .home-message .list-classify .classify-li {
+  line-height: 35px;
   font-size: 14px;
 }
-.wrapper .home-list .list-classify .classify-li .explain {
+.container .home-list .home-message .list-classify .classify-li .explain {
   padding: 5px 10px;
   background: #5BC0DE;
   color: #fff;
   margin-right: 15px;
 }
-.wrapper .home-list .list-classify .classify-li .date {
+.container .home-list .home-message .list-classify .classify-li .date {
   float: right;
 }
-.button {
-  padding: 5px 10px;
-  background: #e4393c;
-  color: #fff;
+.container .home-cont {
+  margin-top: 16px;
+}
+.container .home-cont .show-logo {
+  height: 170px;
   text-align: center;
-  border: 0;
-  outline: 0;
-  border-radius: 10px;
-  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+}
+.container .home-cont .show-logo .show-nav {
+  display: block;
+  height: 170px;
+  background: #fff;
+  margin: 0 8px 0 8px;
+  text-align: center;
+  border: 1px solid #EAEDEE;
+  border-radius: 5px;
+}
+.container .home-cont .show-logo .show-nav img {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-top: 40px;
+  text-align: center;
+}
+.container .home-cont .show-logo .show-nav p {
+  margin-top: 20px;
+  color: #999;
+  font-size: 16px;
 }
